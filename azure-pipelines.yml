@@ -11,14 +11,15 @@ resources:
 variables:
   tag: '$(Build.BuildId)'
 
+pool: "self hosted"
+
 stages:
 - stage: Build
   displayName: Build image
   jobs:
   - job: Build
     displayName: Build
-    pool:
-      vmImage: ubuntu-latest
+    pool: "self hosted"
     steps:
     - task: Docker@2
       displayName: Build an image
