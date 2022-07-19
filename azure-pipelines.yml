@@ -11,7 +11,7 @@ resources:
 variables:
   tag: '$(Build.BuildId)'
 
-pool: self hosted
+pool: "self hosted"
 
 stages:
 - stage: Build
