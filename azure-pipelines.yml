@@ -31,8 +31,8 @@ stages:
           ls -al
           echo `pwd`
           touch `date +s`.log
-  - job: task-0-1
-    displayName: task-0-1
+  - job: task_0_1
+    displayName: task_0_1
     steps:
     - task: Bash@3
       inputs:
@@ -52,7 +52,7 @@ stages:
 - stage: stage2
   displayName: stage2
   jobs:
-  - job: stage2-task2
+  - job: stage2_task2
     displayName: stage2-task2
     #pool: "self hosted"
     steps:
