@@ -19,12 +19,21 @@ stages:
   jobs:
   - job: Build
     displayName: Build
-    pool: "self hosted"
+    #pool: "self hosted"
     steps:
-    - task: Docker@2
-      displayName: Build an image
+    - task: Bash@3
       inputs:
-        command: build
-        dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
-        tags: |
-          $(tag)
+        targetType: 'inline'
+        script: |
+          # Write your commands here
+          
+          echo 'Hello world'
+          ls -al
+          echo `pwd`
+    # - task: Docker@2
+    #   displayName: Build an image
+    #   inputs:
+    #     command: build
+    #     dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
+    #     tags: |
+    #       $(tag)
